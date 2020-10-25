@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import com.facebook.api.dto.ProfileDto;
+import com.facebook.api.exceptions.FacebookAPIException;
 import com.facebook.api.exceptions.NoSuchUserException;
 import com.facebook.api.exceptions.UserProfileAlreadyCreatedException;
 import com.facebook.api.models.Gender;
@@ -59,6 +60,8 @@ public class ProfileService {
 	}
 	
 	public void addFriend(long id, long friendId) {
+		
+		if(id == friendId) throw new FacebookAPIException("friend cannout be same user");
 		
 		Profile profile = getProfileById(id);
 		
