@@ -46,10 +46,12 @@ public class UserService {
 	
 	private UserDto mapUserToDto(User user) {
 		
+		Long profileid = user.getProfile() == null ? null : user.getProfile().getId();
+		
 		return UserDto.builder()
 				.id(user.getId())
 				.username(user.getUsername())
-				.profile(user.getProfile().getId())
+				.profile(profileid)
 				.build();
 		
 	}
