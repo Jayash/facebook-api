@@ -16,7 +16,7 @@ Application URL - https://friend-facebook.herokuapp.com
 | Method | JSON body |
 | ------ | ------ |
 | /api/users/signup | { "username" : "username", "password" : "password"} |
-| /api/profiles/create | {"firstname" : "name","lastname" : "name", "address" : "address", "primaryPhone" : "123456789","gender" : "MALE", "user" :   10 } |
+| /api/profiles/create | {"firstname" : "name","lastname" : "name", "address" : "address", "primaryPhone" : "123456789","gender" : "MALE", "user" :   {user id} } |
 
 # Database Design
 
